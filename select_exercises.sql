@@ -4,7 +4,7 @@ USE codeup_test_db;
 SELECT * FROM albums;
 -- The name of all albums by Pink Floyd.
 SELECT 'list of all ablums' AS 'Pink Floyd';
- SELECT album FROM albums WHERE artist = 'Pink Floyd';
+ SELECT name FROM albums WHERE artist = 'Pink Floyd';
 
 -- The year Sgt. Pepper's Lonely Hearts Club Band was released
 
@@ -21,9 +21,9 @@ SELECT 'list of albums' AS '1990''s' ;
 SELECT name FROM albums WHERE release_date BETWEEN 1990 AND 1999 ;
 -- Which albums had less than 20 million certified sales
 SELECT 'list of albums' AS 'less than 20 million in sales' ;
-SELECT name FROM albums WHERE sales >= 20.0 ;
+SELECT name FROM albums WHERE sales < 20.0 ;
 
 -- All the albums with a genre of "Rock". Why do these query results not include albums with a genre of "Hard rock" or "Progressive rock"?
 
 SELECT 'list of albums' AS 'listed as \'Rock\'';
-SELECT name FROM albums WHERE genre = 'rock';
+SELECT name, genre FROM albums WHERE genre LIKE '%rock%';

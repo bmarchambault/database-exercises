@@ -2,6 +2,7 @@ USE codeup_test_db;
 
 TRUNCATE albums;
 
+--had to convert CSV file to sql insert format. then cmd f to select and remove/modify unwanted content like the extra values key word and the semicolons etc.
 INSERT INTO albums (artist, name, release_date, genre, sales  )
  VALUES ('Michael Jackson', 'Thriller', '1982', 'Pop/Rock/R&B', '47.3'),
   ('AC/DC', 'Back in Black', '1980', 'Hard rock', '26.1'),
